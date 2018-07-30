@@ -1,6 +1,6 @@
 # [Set 1](https://cryptopals.com/sets/1) Learnings
 
-## Challenge 1: Convert hex to base64
+## [Challenge 1: Convert hex to base64](https://cryptopals.com/sets/1/challenges/1)
 
 The rule we were given for this set was:
 > Always operate on raw bytes, never on encoded strings. Only use hex and base64 for pretty-printing.
@@ -15,7 +15,7 @@ Secret messages?
 
 > I'm killing your brain like a poisonous mushroom
 
-## Challenge 2: Fixed XOR
+## [Challenge 2: Fixed XOR](https://cryptopals.com/sets/1/challenges/2)
 
 Here we are asked to take two equal-length buffers and produce their XOR combination. An XOR operation is a logical operation that outputs "true" or the value for true only when inputs differ. So we are given two values and asked to find what the xor produces.
 
@@ -28,14 +28,19 @@ Secret messages?
 > KSSP // [this ?](https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project)
 > hit the bull's eye
 
-## Challenge 3: Single-byte XOR cipher
+## [Challenge 3: Single-byte XOR cipher](https://cryptopals.com/sets/1/challenges/3)
 
-## Challenge 4: Detect single-character XOR
+We are told that a hex encoded string we are given has been XOR'd against a single character. We need to find the key to decrypt the message, but it doesn't want us to use code. We need a method for "scoring" a piece of English plaintext. So... we need a bunch of English! I went to Project Gutenberg and pulled "Tale of Two Cities" for some random English.
 
-## Challenge 5: Implement repeating-key XOR
+Using runes
+Maps have a default zero value
 
-## Challenge 6: Break repeating-key XOR
+## [Challenge 4: Detect single-character XOR](https://cryptopals.com/sets/1/challenges/4)
 
-## Challenge 7: AES in ECB mode
+## [Challenge 5: Implement repeating-key XOR](https://cryptopals.com/sets/1/challenges/5)
 
-## Challenge 8: Detect AES in ECB mode
+## [Challenge 6: Break repeating-key XOR](https://cryptopals.com/sets/1/challenges/6)
+
+## [Challenge 7: AES in ECB mode](https://cryptopals.com/sets/1/challenges/7)
+
+## [Challenge 8: Detect AES in ECB mode](https://cryptopals.com/sets/1/challenges/8)
