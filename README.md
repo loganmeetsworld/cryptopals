@@ -1,4 +1,6 @@
-# Cryptopals
+# Logan's Cryptopals!
+
+[![CircleCI](https://circleci.com/gh/loganmeetsworld/cryptopals.svg?style=svg)](https://circleci.com/gh/loganmeetsworld/cryptopals)
 
 The following contains my code, in Go, for the [Cryptopals](https://cryptopals.com/) sets. In every set folder there are the corresponding exercises and a markdown file of learning notes for the set.
 
