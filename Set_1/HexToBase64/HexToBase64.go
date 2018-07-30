@@ -4,6 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/hex"
 	"fmt"
+	"log"
 )
 
 func hexToBase64(input string) (string, error) {
@@ -13,6 +14,7 @@ func hexToBase64(input string) (string, error) {
 		return "", err
 	}
 
+	log.Printf("%s", result) // printing as a string, the the raw byte value of the result
 	return base64.StdEncoding.EncodeToString(result), nil
 }
 
