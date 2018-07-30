@@ -32,8 +32,13 @@ Secret messages?
 
 We are told that a hex encoded string we are given has been XOR'd against a single character. We need to find the key to decrypt the message, but it doesn't want us to use code. We need a method for "scoring" a piece of English plaintext. So... we need a bunch of English! I went to Project Gutenberg and pulled "Tale of Two Cities" for some random English.
 
-Using runes
-Maps have a default zero value
+So in our method we get some random english from our Gutenberg file. Then we gather that English into some data in the form of a map with rune's as "keys" and a score as values. This method for gathering English data takes a string of the ToTC book (or any string), for each character in the data it adds that character as a rune and gives it a `count`. Then, it takes the total characters in the book and goes through again, making the values a percentage (the `count` value divided by the total value for that character). After we have our English map, we pass our message string given to us by the problem, and the map, into a method for calculating the single byte XOR. This will go through, create an output for every possible key (out of 256 bytes), find the singleXor comparison and then find the "score" of that against our map. To find that score, we iterate through the outputted string and add the "score" for each of those letters to a total and then average it at the end. We then choose the "max" for these scores.
+
+Doing this exercise I learned maps have a default zero value! I also learned about runes. Rune literals are integer values "mapped" to their unicode codepoint.
+
+Secret message?
+
+> Cooking MC's like a pound of bacon
 
 ## [Challenge 4: Detect single-character XOR](https://cryptopals.com/sets/1/challenges/4)
 
