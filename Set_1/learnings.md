@@ -42,6 +42,8 @@ Secret message?
 
 ## [Challenge 4: Detect single-character XOR](https://cryptopals.com/sets/1/challenges/4)
 
+Challenge 4 gives us a bunch of 60-character strings that have been encrypted by a single-character XOR and wants us to find that line.
+
 ## [Challenge 5: Implement repeating-key XOR](https://cryptopals.com/sets/1/challenges/5)
 
 ## [Challenge 6: Break repeating-key XOR](https://cryptopals.com/sets/1/challenges/6)
