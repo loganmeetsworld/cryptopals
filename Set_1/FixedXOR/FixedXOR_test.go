@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"testing"
 )
 
@@ -14,7 +15,7 @@ func TestFixedXOR(t *testing.T) {
 	}
 	for _, table := range tables {
 		result := fixedXOR(table.x, table.y)
-		if result != table.z {
+		if !bytes.Equal(result, hexDecode(table.z)) {
 			t.Errorf("fixedXOR(%s, %s) was incorrect, got: %s, want: %s.", table.x, table.y, table.z, result)
 		}
 	}

@@ -11,16 +11,31 @@ The rule for this set is important. We want to explore the difference between sl
 
 I wrote [HexToBase64](./HexToBase64/HexToBase64.go) to solve this problem. In this method, we first [decode the string](https://golang.org/pkg/encoding/hex/#DecodeString) which returns the bytes represented by the hexadecimal string in case it is malformed. Then we use a [base64 encoding method](https://golang.org/pkg/encoding/base64/#Encoding.EncodeToString) to return a base64 encoding of the input.
 
-## Fixed XOR
+Secret messages?
 
-## Single-byte XOR cipher
+> I'm killing your brain like a poisonous mushroom
 
-## Detect single-character XOR
+## Challenge 2: Fixed XOR
 
-## Implement repeating-key XOR
+Here we are asked to take two equal-length buffers and produce their XOR combination. An XOR operation is a logical operation that outputs "true" or the value for true only when inputs differ. So we are given two values and asked to find what the xor produces.
 
-## Break repeating-key XOR
+I wrote [FixedXOR](./FixedXOR/FixedXOR.go) to do this translation. It's a pretty normal XOR function where it takes the length and makes sure that is the same then moved through each byte and compares them.
 
-## AES in ECB mode
+At one point I got an error that you cannot compare slices to nil and I had to use `bytes.Equal` for comparison, which I did not know about!
 
-## Detect AES in ECB mode
+Secret messages?
+
+> KSSP // [this ?](https://kernsec.org/wiki/index.php/Kernel_Self_Protection_Project)
+> hit the bull's eye
+
+## Challenge 3: Single-byte XOR cipher
+
+## Challenge 4: Detect single-character XOR
+
+## Challenge 5: Implement repeating-key XOR
+
+## Challenge 6: Break repeating-key XOR
+
+## Challenge 7: AES in ECB mode
+
+## Challenge 8: Detect AES in ECB mode
