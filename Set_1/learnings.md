@@ -42,7 +42,21 @@ Secret message?
 
 ## [Challenge 4: Detect single-character XOR](https://cryptopals.com/sets/1/challenges/4)
 
-Challenge 4 gives us a bunch of 60-character strings that have been encrypted by a single-character XOR and wants us to find that line.
+Challenge 4 gives us a bunch of 60-character strings that have been encrypted by a single-character XOR and wants us to find that line. We can reuse all our methods from the previous challenge while keeping track of our overall score. I learned of a good way to go through each line of a file in this challenge:
+
+```go
+for _, line := range strings.Split(string(text), "\n") {
+    // do stuff
+}
+```
+
+or
+
+```go
+for _, line := range bytes.Split(text, []byte) {
+    // do stuff
+}
+```
 
 ## [Challenge 5: Implement repeating-key XOR](https://cryptopals.com/sets/1/challenges/5)
 
